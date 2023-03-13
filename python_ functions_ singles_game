@@ -1,0 +1,46 @@
+#Akeem Abiodun Task 17
+def love():
+  #singleness
+  singleness = input("kindly enter the number 1 to indicate your singleness ")
+  singleness_int = int(singleness)
+  if singleness_int != 1:
+    return "Kindly input the number 1 here "
+  
+  #maturity
+  maturity_score = input("Please enter your maturity score (1-10): ")
+  #Converting the maturity number entered by user to integer
+  maturity_score_int = int(maturity_score)
+
+  if not maturity_score.isnumeric() or maturity_score_int < 1 or maturity_score_int > 10:
+    return "Kindly input a number between 1 and 10"
+
+  #intelligence
+  intelligence_score = input("Please enter your intelligence score (1-10): ")
+  #Converting the Intelligence number entered by user to integer
+
+  intelligence_score_int = int(intelligence_score)
+  if not intelligence_score.isnumeric() or intelligence_score_int < 1 or intelligence_score_int > 10:
+    return "Kindly input a number between 1 and 10"
+#trust
+  trust_score = input("Please enter your trust score (1-10): ")
+  trust_score_int = int(
+    trust_score)  #Converting the trust number entered by user to integer
+  if not trust_score.isnumeric() or trust_score_int < 1 or trust_score_int > 10:
+    return "Kindly input a number between 1 and 10"
+#love
+  love_score = input("Please enter your love score (1-10): ")
+  love_score_int = int(
+    love_score)  #Converting the love number entered by user to integer
+
+  if not love_score.isnumeric() or love_score_int< 1 or love_score_int > 10:
+    return "Kindly input a number between 1 and 10"
+#summation of scores
+  total_score = singleness_int + maturity_score_int + intelligence_score_int + trust_score_int + love_score_int  #Calculating all the inputs to get a total score
+
+#determination of print output with conditional statement
+  if total_score >= 21:
+    return "Congrats! You are closer to your desired romantic relationship"
+  else:
+    return "Sorry, you are not eligible for a romantic relationship yet"
+#test call
+print(love())
